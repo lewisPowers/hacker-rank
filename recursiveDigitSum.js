@@ -5,4 +5,4 @@ function superDigit(n, k) {
   if (k > 1) return superDigit( (sumDigits * k).toString(), 1);
   return sumDigits;
 }
-console.log(superDigit('4757362', 10000));
+// console.log(superDigit('4757362', 10000));
