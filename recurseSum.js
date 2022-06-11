@@ -11,6 +11,6 @@ function superDigit(n, k) {
     return nStr;
   }
 }
-console.log(superDigit('148', 3));
-console.log(superDigit('4757362', 111));
-console.log(superDigit('4757362', 10000));
+// console.log(superDigit('148', 3));
+// console.log(superDigit('4757362', 111));
+// console.log(superDigit('4757362', 10000));
