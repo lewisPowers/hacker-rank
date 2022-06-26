@@ -1,6 +1,8 @@
+import frontend from '/modules/frontendModule.js';
+
 function superDigit(n, k) {
   let sumKTimes = (sumOfN(n) * k).toString();
-  return sumOfN(sumKTimes)
+  return sumOfN(sumKTimes);
   function sumDigitsOfStr(numStr) {
     return numStr.split('').reduce((acc, curr) => {
       return acc + Number(curr);
@@ -11,6 +13,10 @@ function superDigit(n, k) {
     return nStr;
   }
 }
+
+superDigit.inputWidth = 5;
+superDigit.newName = "Find the 'Super Digit'"
+frontend(superDigit, '148', 3)
 // console.log(superDigit('148', 3));
 // console.log(superDigit('4757362', 111));
 // console.log(superDigit('4757362', 10000));
