@@ -1,3 +1,5 @@
+import frontend from '/modules/frontendModule.js';
+
 function gridChallenge(grid) {
   let isSorted = string => string === sort(string)
   let sort = str => str.split('').sort((a,b) => a < b ? -1 : b < a ? 1 : 0).join('');
@@ -14,3 +16,9 @@ function gridChallenge(grid) {
   }
   return 'YES';
 }
+
+gridChallenge.newName = 'Grid Challenge';
+gridChallenge.inputWidth = 9;
+// gridChallenge.info =
+frontend(gridChallenge, [[1,2,3],[4,5,6],[7,8,9]])
+console.log(gridChallenge([[1,2],[3,4]]))
