@@ -36,7 +36,7 @@ export default function(fn, argsArr, targetId) {
       }
     });
     let key = fn.toString();
-    console.log(args)
+    // console.log(args)
     fn[key] = fn.apply(this, args);
     let children = moduleClicked.children;
     let span = children[children.length - 1];
