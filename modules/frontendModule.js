@@ -15,7 +15,7 @@ export default function(fn, args) {
   let code = formatCode(fn.toString());
 
   heading.textContent = `${fn.newName || fn.name}`;
-  exampleInput.textContent = `Example Input: ${allArgsArr}`;
+  exampleInput.textContent = `Example Input: ${formatExampleInputString(allArgsArr)}`;
   exampleOutput.textContent = `Example Output: ${call}`;
   testOutput.textContent = `Test Output: `;
 
@@ -39,6 +39,19 @@ function getArgArr(arrLike) {
   let allArgsArr = Array.from(arrLike);
   allArgsArr.shift();
   return allArgsArr;
+}
+
+function formatExampleInputString(input) {
+  if (Array.isArray(input)) {
+    return input.reduce((string, element, i) => {
+      if (i === input.length - 1) {
+        return string += `${i + 1}) ${element}`;
+      } else {
+        return string += `${i + 1}) ${element} `;
+      }
+    }, '');
+  }
+  return input;
 }
 
 function createEl(tagOrClass, classesOrXtra) {
