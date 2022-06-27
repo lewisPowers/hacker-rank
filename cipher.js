@@ -1,3 +1,5 @@
+import frontend from '/modules/frontendModule.js';
+
 function caesarCipher(s, k) {
   while (k > 26) k -= 26;
   return s.split('').map(char => isLetter(char) ? convertCharacter(char) : char ).join('');
@@ -12,3 +14,5 @@ function caesarCipher(s, k) {
     return String.fromCharCode(newCode)
   }
 }
+caesarCipher.newName = "Ceasar's Cipher";
+frontend(caesarCipher, 'These are my last words.', 4)
