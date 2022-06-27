@@ -58,6 +58,3 @@ function minimumBribes(q) {
   return moves;
 }
 
-
-title = document.querySelector('[data-id]')
-title.textContent = `New Years Chaos: ${minimumBribes([1,2,5,3,4,6])} moves`
